@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+
+    <record id="action_omar" model="ir.actions.act_window">
+            <field name="name">Employee List</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">employee.list</field>
+            <field name="view_mode">tree,form,pivot</field>
+<!--            <field name="search_view_id" ref="surgi_operation_operation_search_view"/>-->
+<!--            <field name="context">{'search_default_payment_methods' : 1}</field>-->
+<!--            <field name="help" type="html">-->
+<!--                <p class="oe_view_nocontent_create">-->
+<!--                    Click to create a new Operation.-->
+<!--                </p>-->
+<!--            </field>-->
+        </record>
+
+     <menuitem
+                id="omar_menuitem"
+                name="Employee List"
+                action="action_omar"
+                sequence="1"/>
+<!--                groups="surgi_operation.operations_manager_group,surgi_operation.operations_user_group,surgi_operation.operations_viewer_group"-->
+<!--                web_icon="surgi_operation,static/src/img/icon.png"-->
+
+
+
+</odoo>
