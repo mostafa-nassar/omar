@@ -26,14 +26,29 @@
 <!--                    Click to create a new Operation.-->
 <!--                </p>-->
 <!--            </field>-->
-        </record>
+    </record>
+
+    <record id="omar_form" model="ir.ui.view">
+            <field name="name">employee list</field>
+            <field name="model">employee.list</field>
+            <field name="arch" type="xml">
+                <form string="Employee List">
+                    <header>
+                    </header>
+                    <field name="name" string="Employee Name"/>
+                    <field name="birth_date" string="Birth Date"/>
+                    <field name="phone" sting="Mobile No."/>
+                </form>
+            </field>
+    </record>
+
 
     <record id="action_omar_tree" model="ir.actions.act_window.view">
             <field name="act_window_id" ref="action_omar"/>
             <field name="sequence" eval="1"/>
             <field name="view_mode">tree</field>
             <field name="view_id" ref="omar_tree"/>
-        </record>
+    </record>
 
 <!--        <record id="action_omar_form" model="ir.actions.act_window.view">-->
 <!--            <field name="act_window_id" ref="action_omar"/>-->
