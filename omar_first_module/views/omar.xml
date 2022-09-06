@@ -2,6 +2,18 @@
 
 <odoo>
 
+    <record id="omar_tree" model="ir.ui.view">
+            <field name="name">omar.tree</field>
+            <field name="model">employee.list</field>
+            <field name="arch" type="xml">
+                <tree string="Employee List">
+                    <field name="name" string="Employee Name"/>
+                    <field name="birth_date" string="Birth Date" optional="show"/>
+                    <field name="phone" sting="Mobile No." optional="hide"/>
+                </tree>
+            </field>
+    </record>
+
     <record id="action_omar" model="ir.actions.act_window">
             <field name="name">Employee List</field>
             <field name="type">ir.actions.act_window</field>
@@ -15,6 +27,20 @@
 <!--                </p>-->
 <!--            </field>-->
         </record>
+
+    <record id="action_omar_tree" model="ir.actions.act_window.view">
+            <field name="act_window_id" ref="action_omar"/>
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">tree</field>
+            <field name="view_id" ref="omar_tree"/>
+        </record>
+
+<!--        <record id="action_omar_form" model="ir.actions.act_window.view">-->
+<!--            <field name="act_window_id" ref="action_omar"/>-->
+<!--            <field name="sequence" eval="2"/>-->
+<!--            <field name="view_mode">form</field>-->
+<!--            <field name="view_id" ref="omar_form"/>-->
+<!--        </record>-->
 
      <menuitem
                 id="omar_menuitem"
